@@ -13,6 +13,49 @@
  console.log(odd(arr));                  //OUTPUT: [1,3,5,7,9]
 
 
+ //Example 1:-Anonyomus Function
+ //Print the odd numbers in an array
+ var arr = [12, 13, 14, 15, 16];
+ var result = [];
+ var odd = function (arr) {
+ for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+ };
+ console.log(odd(arr));
+ 
+ 
+ 
+ //Example 1:- //IIFE (Immediately Invoked Function Expression)
+ //Print the odd numbers in an array
+ (function odd(arr) {
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
+      result.push(arr[i]);
+    }
+  }
+  console.log(result);
+ })([11,12,13,14,15,16,17,18,19]);      //OUTPUT: [11,13,15,17,19]
+
+ //Example 1:-Arrow Function (ES6)
+ //Print the odd numbers in an array
+ const od = (arr) => {
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 != 0) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+ };
+ console.log(od([1, 2, 3, 4, 5, 6, 7, 8, 9]));          //[1,3,5,7,9,]
+
+
+
  //Example 2:- anonymous method
  //convert all the strings to title caps in a string array
  const toTitleCase = function(str) {
@@ -72,14 +115,4 @@
  
 
  
- //Example 1:- //IIFE (Immediately Invoked Function Expression)
- //Print the odd numbers in an array
- (function odd(arr) {
-    var result = [];
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 != 0) {
-        result.push(arr[i]);
-      }
-    }
-    console.log(result);
-   })([11,12,13,14,15,16,17,18,19]);      //OUTPUT: [11,13,15,17,19]
+ 
